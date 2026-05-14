@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blokzeep — KPI Tracker</title>
+<title>Blokzeep - KPI Tracker</title>
 <!-- Chart.js for the Charts tab -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
 <style>
@@ -167,7 +167,7 @@ tr:hover td{background:var(--bg3)}
 .suggest{font-size:9px;color:var(--text3);margin-top:2px;font-style:italic}
 .suggest.has-val{color:var(--green-dim)}
 
-/* Contact headers — hidden until a contact exists */
+/* Contact headers - hidden until a contact exists */
 #b2bContactHeaders{display:none}
 #b2bContactHeaders.visible{display:grid}
 </style>
@@ -185,14 +185,14 @@ tr:hover td{background:var(--bg3)}
   </div>
 </nav>
 
-<!-- ═══════════════════════════════════════
+<!-- =======================================
   WEEKLY INPUT
-═══════════════════════════════════════ -->
+======================================= -->
 <div class="view active" id="view-form">
   <div class="page-header">
     <div>
       <div class="page-title">Weekly <span>Input</span></div>
-      <div class="page-sub">Targets can be adjusted per week — suggestions come from monthly target ÷ 4</div>
+      <div class="page-sub">Targets can be adjusted per week - suggestions come from monthly target ÷ 4</div>
     </div>
   </div>
 
@@ -202,7 +202,7 @@ tr:hover td{background:var(--bg3)}
     <div class="sec-body">
       <div class="sec-row">
         <div class="g4">
-          <div class="field"><label>WK</label><input type="number" id="fWk" min="1" max="53" placeholder="—" oninput="onWkChange()"></div>
+          <div class="field"><label>WK</label><input type="number" id="fWk" min="1" max="53" placeholder="-" oninput="onWkChange()"></div>
           <div class="field"><label>Month</label>
             <select id="fMonth" onchange="loadMonthSuggestions()">
               <option value="1">January</option><option value="2">February</option>
@@ -222,27 +222,27 @@ tr:hover td{background:var(--bg3)}
 
   <!-- B2B NEW -->
   <div class="sec">
-    <div class="sec-head">B2B — New Customers</div>
+    <div class="sec-head">B2B - New Customers</div>
     <div class="sec-body">
       <div class="sec-row">
         <div class="kpi3">
           <div class="field">
-            <label>Contact count — Target</label>
+            <label>Contact count - Target</label>
             <input type="number" id="b2bNCT" placeholder="0" oninput="pct('b2bNCT','b2bNCA','pB2bNC')">
             <div class="suggest" id="sg_b2bNContacts"></div>
           </div>
           <div class="field">
-            <label>Contact count — Achieve</label>
+            <label>Contact count - Achieve</label>
             <input type="number" id="b2bNCA" placeholder="0" oninput="pct('b2bNCT','b2bNCA','pB2bNC')">
           </div>
           <div class="field">
             <label>%</label>
-            <div class="pct" id="pB2bNC">—</div>
+            <div class="pct" id="pB2bNC">-</div>
           </div>
         </div>
       </div>
       <div class="sec-row" style="background:var(--bg3)">
-        <div style="font-size:9px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px">Who did you contact this week? — New pipeline</div>
+        <div style="font-size:9px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px">Who did you contact this week? - New pipeline</div>
         <div id="b2bContactHeaders" style="display:grid;grid-template-columns:1fr 1fr 100px 100px 90px 26px;gap:6px;padding-bottom:6px;border-bottom:1px solid var(--border);margin-bottom:6px">
           <span style="font-size:9px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.05em">Name</span>
           <span style="font-size:9px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.05em">Company</span>
@@ -259,7 +259,7 @@ tr:hover td{background:var(--bg3)}
 
   <!-- B2B OLD -->
   <div class="sec">
-    <div class="sec-head">B2B — Existing Customers</div>
+    <div class="sec-head">B2B - Existing Customers</div>
     <div class="sec-body">
       <div class="sec-row">
         <div style="font-size:9px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px">Order Revenue</div>
@@ -275,7 +275,7 @@ tr:hover td{background:var(--bg3)}
           </div>
           <div class="field">
             <label>%</label>
-            <div class="pct" id="pB2bO">—</div>
+            <div class="pct" id="pB2bO">-</div>
           </div>
         </div>
       </div>
@@ -283,22 +283,22 @@ tr:hover td{background:var(--bg3)}
         <div style="font-size:9px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px">Contact count</div>
         <div class="kpi3">
           <div class="field">
-            <label>Contact count — Target</label>
+            <label>Contact count - Target</label>
             <input type="number" id="b2bOCT" placeholder="0" oninput="pct('b2bOCT','b2bOCA','pB2bOC')">
             <div class="suggest" id="sg_b2bOContacts"></div>
           </div>
           <div class="field">
-            <label>Contact count — Achieve</label>
+            <label>Contact count - Achieve</label>
             <input type="number" id="b2bOCA" placeholder="0" oninput="pct('b2bOCT','b2bOCA','pB2bOC')">
           </div>
           <div class="field">
             <label>%</label>
-            <div class="pct" id="pB2bOC">—</div>
+            <div class="pct" id="pB2bOC">-</div>
           </div>
         </div>
       </div>
       <div class="sec-row" style="background:var(--bg3)">
-        <div style="font-size:9px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px">Who did you contact this week? — Existing customers</div>
+        <div style="font-size:9px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px">Who did you contact this week? - Existing customers</div>
         <div id="b2bOldContactHeaders" style="display:grid;grid-template-columns:1fr 1fr 110px 100px 26px;gap:6px;padding-bottom:6px;border-bottom:1px solid var(--border);margin-bottom:6px">
           <span style="font-size:9px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.05em">Name</span>
           <span style="font-size:9px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.05em">Company</span>
@@ -317,7 +317,7 @@ tr:hover td{background:var(--bg3)}
   <!-- B2C WEBSITE -->
   <div class="sec">
     <div class="sec-head" style="justify-content:space-between;display:flex;align-items:center">
-      <span>B2C — Website</span>
+      <span>B2C - Website</span>
       <button onclick="toggleWoo()" id="wooBtn" style="background:var(--purple-lt);border:1px solid var(--purple);color:var(--purple);font-family:'Syne',sans-serif;font-size:10px;font-weight:700;padding:3px 10px;border-radius:4px;cursor:pointer">WooCommerce</button>
     </div>
     <div class="sec-body">
@@ -325,7 +325,7 @@ tr:hover td{background:var(--bg3)}
         <div class="kpi4">
           <div class="field"><label>B2C Target €</label><input type="number" id="b2cT" placeholder="0" oninput="pct('b2cT','b2cA','pB2c')"><div class="suggest" id="sg_b2c"></div></div>
           <div class="field"><label>B2C Achieve €</label><input type="number" id="b2cA" placeholder="0" oninput="pct('b2cT','b2cA','pB2c');diffCalc();calcGrowth();"></div>
-          <div class="field"><label>%</label><div class="pct" id="pB2c">—</div></div>
+          <div class="field"><label>%</label><div class="pct" id="pB2c">-</div></div>
           <div class="field"><label>B2C Orders</label><input type="number" id="b2cOrd" placeholder="0" oninput="calcGrowth()"></div>
         </div>
       </div>
@@ -340,7 +340,7 @@ tr:hover td{background:var(--bg3)}
               <button onclick="autoFillPrev()" title="Auto-fill from last saved week" style="background:var(--green-lt);border:1px solid var(--green-dim);border-radius:6px;color:var(--green);cursor:pointer;font-family:'Syne',sans-serif;font-size:10px;font-weight:700;padding:6px 10px;white-space:nowrap;transition:all .2s" onmouseover="this.style.background='var(--green)';this.style.color='#fff'" onmouseout="this.style.background='var(--green-lt)';this.style.color='var(--green)'">Auto-fill</button>
             </div>
           </div>
-          <div class="field"><label>Difference</label><div class="pct" id="b2cDiff">—</div></div>
+          <div class="field"><label>Difference</label><div class="pct" id="b2cDiff">-</div></div>
         </div>
       </div>
       <div class="sec-row" style="background:var(--bg3)">
@@ -352,12 +352,12 @@ tr:hover td{background:var(--bg3)}
           </div>
           <div class="field">
             <label>Conversion rate</label>
-            <div class="pct" id="convRate" style="font-size:13px">—</div>
+            <div class="pct" id="convRate" style="font-size:13px">-</div>
             <div style="font-size:9px;color:var(--text3);margin-top:2px">orders ÷ sessions</div>
           </div>
           <div class="field">
             <label>Avg Order Value (AOV)</label>
-            <div class="pct" id="aov" style="font-size:13px">—</div>
+            <div class="pct" id="aov" style="font-size:13px">-</div>
             <div style="font-size:9px;color:var(--text3);margin-top:2px">revenue ÷ orders</div>
           </div>
         </div>
@@ -368,7 +368,7 @@ tr:hover td{background:var(--bg3)}
           </div>
           <div class="field">
             <label>CAC</label>
-            <div class="pct" id="cac" style="font-size:13px">—</div>
+            <div class="pct" id="cac" style="font-size:13px">-</div>
             <div style="font-size:9px;color:var(--text3);margin-top:2px">ad spend ÷ new customers</div>
           </div>
           <div class="field">
@@ -380,9 +380,9 @@ tr:hover td{background:var(--bg3)}
       <!-- WOOCOMMERCE PANEL -->
       <div id="wooPanel" style="display:none;padding:0">
         <div class="sec-row" style="background:var(--purple-lt);border-top:1px solid var(--purple)">
-          <div style="font-size:9px;font-weight:700;color:var(--purple);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px">WooCommerce — Live fetch</div>
+          <div style="font-size:9px;font-weight:700;color:var(--purple);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px">WooCommerce - Live fetch</div>
           <div style="background:#fff;border:1px solid #D0CAFF;border-radius:6px;padding:10px 12px;font-size:11px;color:#5B4FBE;margin-bottom:10px;line-height:1.6">
-            Enter your WooCommerce store URL and read-only API keys. Revenue and orders for the selected date range will be fetched and auto-filled. Your keys are never stored — they are only used for this browser session.
+            Enter your WooCommerce store URL and read-only API keys. Revenue and orders for the selected date range will be fetched and auto-filled. Your keys are never stored - they are only used for this browser session.
           </div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px">
             <div class="field"><label>Store URL</label><input type="text" id="wooUrl" placeholder="https://yourstore.com" style="font-size:12px"></div>
@@ -395,7 +395,7 @@ tr:hover td{background:var(--bg3)}
             <div id="wooStatus" style="font-size:11px;color:var(--text2)"></div>
           </div>
           <div style="margin-top:8px;font-size:10px;color:var(--text3);line-height:1.5">
-            Requires WooCommerce REST API enabled. Create read-only keys at: WooCommerce → Settings → Advanced → REST API. The store must have HTTPS and allow CORS from browsers (some hosts block this — see note 7 below).
+            Requires WooCommerce REST API enabled. Create read-only keys at: WooCommerce → Settings → Advanced → REST API. The store must have HTTPS and allow CORS from browsers (some hosts block this - see note 7 below).
           </div>
         </div>
       </div>
@@ -414,12 +414,12 @@ tr:hover td{background:var(--bg3)}
           </div>
           <div class="field">
             <label>Total revenue (all channels)</label>
-            <div class="pct" id="totalRevAll" style="font-size:14px;font-weight:700">—</div>
+            <div class="pct" id="totalRevAll" style="font-size:14px;font-weight:700">-</div>
             <div style="font-size:9px;color:var(--text3);margin-top:2px">B2C + B2B new + B2B old</div>
           </div>
           <div class="field">
             <label>Gross profit (€)</label>
-            <div class="pct" id="grossProfit" style="font-size:14px;font-weight:700">—</div>
+            <div class="pct" id="grossProfit" style="font-size:14px;font-weight:700">-</div>
             <div style="font-size:9px;color:var(--text3);margin-top:2px">revenue x margin %</div>
           </div>
         </div>
@@ -441,28 +441,28 @@ tr:hover td{background:var(--bg3)}
             <tr id="adrow_google"><td><input type="text" value="GOOGLE" style="background:transparent;border:none;font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--text2);letter-spacing:.06em;text-transform:uppercase;width:80px;outline:none"></td>
               <td><div class="field"><input type="number" id="gC" placeholder="0" oninput="roasCalc('gC','gR','gRoas');totals();calcGrowth()"></div></td>
               <td><div class="field"><input type="number" id="gR" placeholder="0" oninput="roasCalc('gC','gR','gRoas');totals();calcGrowth()"></div></td>
-              <td><div class="ad-roas pct" id="gRoas">—</div></td>
+              <td><div class="ad-roas pct" id="gRoas">-</div></td>
               <td></td>
             </tr>
             <tr id="adrow_meta"><td><input type="text" value="META" style="background:transparent;border:none;font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--text2);letter-spacing:.06em;text-transform:uppercase;width:80px;outline:none"></td>
               <td><div class="field"><input type="number" id="mC" placeholder="0" oninput="roasCalc('mC','mR','mRoas');totals();calcGrowth()"></div></td>
               <td><div class="field"><input type="number" id="mR" placeholder="0" oninput="roasCalc('mC','mR','mRoas');totals();calcGrowth()"></div></td>
-              <td><div class="ad-roas pct" id="mRoas">—</div></td>
+              <td><div class="ad-roas pct" id="mRoas">-</div></td>
               <td></td>
             </tr>
             <tr id="adrow_email"><td><input type="text" value="EMAIL" style="background:transparent;border:none;font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--text2);letter-spacing:.06em;text-transform:uppercase;width:80px;outline:none"></td>
               <td><div class="field"><input type="number" id="eC" placeholder="0" oninput="roasCalc('eC','eR','eRoas');totals();calcGrowth()"></div></td>
               <td><div class="field"><input type="number" id="eR" placeholder="0" oninput="roasCalc('eC','eR','eRoas');totals();calcGrowth()"></div></td>
-              <td><div class="ad-roas pct" id="eRoas">—</div></td>
+              <td><div class="ad-roas pct" id="eRoas">-</div></td>
               <td></td>
             </tr>
           </tbody>
         </table>
       </div>
       <div class="total-row">
-        <div class="total-card"><div class="lbl">Total Cost</div><div class="val" id="tCost">€ —</div></div>
-        <div class="total-card"><div class="lbl">Total Revenue</div><div class="val" style="color:var(--green)" id="tRev">€ —</div></div>
-        <div class="total-card"><div class="lbl">Total ROAS</div><div class="val" style="color:var(--amber)" id="tRoas">—</div></div>
+        <div class="total-card"><div class="lbl">Total Cost</div><div class="val" id="tCost">€ -</div></div>
+        <div class="total-card"><div class="lbl">Total Revenue</div><div class="val" style="color:var(--green)" id="tRev">€ -</div></div>
+        <div class="total-card"><div class="lbl">Total ROAS</div><div class="val" style="color:var(--amber)" id="tRoas">-</div></div>
       </div>
     </div>
   </div>
@@ -486,7 +486,7 @@ tr:hover td{background:var(--bg3)}
           <label style="font-size:10px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.06em">Task of next week</label>
           <button onclick="addTaskNRow()" style="background:var(--green);border:none;color:#fff;font-family:'Syne',sans-serif;font-size:10px;font-weight:700;padding:3px 10px;border-radius:4px;cursor:pointer">+ Add</button>
         </div>
-        <textarea id="taskN" placeholder="Priorities for next week — be specific"></textarea>
+        <textarea id="taskN" placeholder="Priorities for next week - be specific"></textarea>
         <div id="extraTaskNRows" style="margin-top:6px;display:flex;flex-direction:column;gap:5px"></div>
       </div>
       <div id="extraTaskRows"></div>
@@ -500,7 +500,7 @@ tr:hover td{background:var(--bg3)}
       <button onclick="addIdeaRow()" style="background:var(--green);border:none;color:#fff;font-family:'Syne',sans-serif;font-size:10px;font-weight:700;padding:3px 10px;border-radius:4px;cursor:pointer">+ Add idea</button>
     </div>
     <div class="sec-body">
-      <div class="sec-row"><div class="field"><label>Ideas this week — products, campaigns, partnerships</label><textarea id="ideaMain" placeholder="E.g. collab with eco influencer, new bundle, B2B segment to explore..." style="min-height:72px"></textarea></div></div>
+      <div class="sec-row"><div class="field"><label>Ideas this week - products, campaigns, partnerships</label><textarea id="ideaMain" placeholder="E.g. collab with eco influencer, new bundle, B2B segment to explore..." style="min-height:72px"></textarea></div></div>
       <div id="extraIdeaRows"></div>
     </div>
   </div>
@@ -522,7 +522,7 @@ tr:hover td{background:var(--bg3)}
     <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2 7.5L5.5 11L13 3" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
     Save the week
   </button>
-  <div class="toast" id="formToast">Saved — visible in Sheet &amp; Overview</div>
+  <div class="toast" id="formToast">Saved - visible in Sheet &amp; Overview</div>
   <div id="saveSuccessBanner" style="display:none;margin-top:14px;background:var(--green-lt);border:1px solid var(--green-dim);border-radius:var(--r);padding:16px 20px;text-align:center">
     <div style="font-size:20px;margin-bottom:6px"></div>
     <div style="font-size:14px;font-weight:700;color:var(--green)">Week saved successfully!</div>
@@ -530,14 +530,14 @@ tr:hover td{background:var(--bg3)}
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════
+<!-- =======================================
   MONTHLY TARGETS
-═══════════════════════════════════════ -->
+======================================= -->
 <div class="view" id="view-monthly">
   <div class="page-header">
     <div>
       <div class="page-title">Monthly <span>Targets</span></div>
-      <div class="page-sub">Set per month — Weekly Input will show ÷4 as a suggestion</div>
+      <div class="page-sub">Set per month - Weekly Input will show ÷4 as a suggestion</div>
     </div>
     <div class="month-sel">
       <select id="mtMonth" onchange="renderMonthly()">
@@ -555,31 +555,31 @@ tr:hover td{background:var(--bg3)}
   <!-- Monthly target inputs -->
   <div class="month-grid">
     <div class="month-card">
-      <div class="month-card-head">B2B New — Contacts</div>
+      <div class="month-card-head">B2B New - Contacts</div>
       <div class="month-card-body">
         <div class="month-field"><label>Monthly contact target</label><input type="number" id="mt_b2bNContacts" placeholder="0" oninput="updateSuggestions()"></div>
-        <div class="month-field" style="opacity:.6"><label>Weekly suggestion (÷4)</label><div style="font-family:'DM Mono',monospace;font-size:13px;color:var(--green)" id="sg2_b2bNContacts">—</div></div>
+        <div class="month-field" style="opacity:.6"><label>Weekly suggestion (÷4)</label><div style="font-family:'DM Mono',monospace;font-size:13px;color:var(--green)" id="sg2_b2bNContacts">-</div></div>
       </div>
     </div>
     <div class="month-card">
-      <div class="month-card-head">B2B Old — Revenue</div>
+      <div class="month-card-head">B2B Old - Revenue</div>
       <div class="month-card-body">
         <div class="month-field"><label>Monthly target €</label><input type="number" id="mt_b2bO" placeholder="0" oninput="updateSuggestions()"></div>
-        <div class="month-field" style="opacity:.6"><label>Weekly suggestion (÷4)</label><div style="font-family:'DM Mono',monospace;font-size:13px;color:var(--green)" id="sg2_b2bO">—</div></div>
+        <div class="month-field" style="opacity:.6"><label>Weekly suggestion (÷4)</label><div style="font-family:'DM Mono',monospace;font-size:13px;color:var(--green)" id="sg2_b2bO">-</div></div>
       </div>
     </div>
     <div class="month-card">
-      <div class="month-card-head">B2B Old — Contacts</div>
+      <div class="month-card-head">B2B Old - Contacts</div>
       <div class="month-card-body">
         <div class="month-field"><label>Monthly contact target</label><input type="number" id="mt_b2bOContacts" placeholder="0" oninput="updateSuggestions()"></div>
-        <div class="month-field" style="opacity:.6"><label>Weekly suggestion (÷4)</label><div style="font-family:'DM Mono',monospace;font-size:13px;color:var(--green)" id="sg2_b2bOContacts">—</div></div>
+        <div class="month-field" style="opacity:.6"><label>Weekly suggestion (÷4)</label><div style="font-family:'DM Mono',monospace;font-size:13px;color:var(--green)" id="sg2_b2bOContacts">-</div></div>
       </div>
     </div>
     <div class="month-card">
       <div class="month-card-head">B2C Website</div>
       <div class="month-card-body">
         <div class="month-field"><label>Monthly target €</label><input type="number" id="mt_b2c" placeholder="0" oninput="updateSuggestions()"></div>
-        <div class="month-field" style="opacity:.6"><label>Weekly suggestion (÷4)</label><div style="font-family:'DM Mono',monospace;font-size:13px;color:var(--green)" id="sg2_b2c">—</div></div>
+        <div class="month-field" style="opacity:.6"><label>Weekly suggestion (÷4)</label><div style="font-family:'DM Mono',monospace;font-size:13px;color:var(--green)" id="sg2_b2c">-</div></div>
       </div>
     </div>
   </div>
@@ -597,9 +597,9 @@ tr:hover td{background:var(--bg3)}
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════
+<!-- =======================================
   CHARTS
-═══════════════════════════════════════ -->
+======================================= -->
 <div class="view" id="view-charts">
   <div class="page-header">
     <div>
@@ -615,19 +615,19 @@ tr:hover td{background:var(--bg3)}
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════
+<!-- =======================================
   EMAIL REPORT
-═══════════════════════════════════════ -->
+======================================= -->
 <div class="view" id="view-email">
   <div class="page-header">
     <div>
       <div class="page-title">Email <span>Report</span></div>
-      <div class="page-sub">Generate a formatted weekly summary — copy and paste into your email client</div>
+      <div class="page-sub">Generate a formatted weekly summary - copy and paste into your email client</div>
     </div>
   </div>
 
   <div style="background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);padding:12px 16px;margin-bottom:16px;font-size:12px;color:var(--text2);line-height:1.6">
-    Fill in the Weekly Input tab first. Then set recipients below and click Generate. The full report — numbers, contacts, tasks, ideas — will be ready to copy into email.
+    Fill in the Weekly Input tab first. Then set recipients below and click Generate. The full report - numbers, contacts, tasks, ideas - will be ready to copy into email.
   </div>
 
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px">
@@ -641,16 +641,16 @@ tr:hover td{background:var(--bg3)}
 
   <div id="emailOutput" style="display:none;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin-bottom:14px">
     <div style="background:var(--green);padding:11px 16px;display:flex;align-items:center;justify-content:space-between">
-      <span style="font-size:12px;font-weight:700;color:#fff;letter-spacing:.04em">Weekly report — ready to copy</span>
+      <span style="font-size:12px;font-weight:700;color:#fff;letter-spacing:.04em">Weekly report - ready to copy</span>
       <button id="copyEmailBtn" onclick="copyEmail()" style="background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.3);color:#fff;font-family:'Syne',sans-serif;font-size:11px;font-weight:700;padding:5px 14px;border-radius:20px;cursor:pointer;transition:all .2s" onmouseover="this.style.background='rgba(255,255,255,.35)'" onmouseout="this.style.background='rgba(255,255,255,.2)'">Copy</button>
     </div>
     <div id="emailContent" style="padding:20px 22px;font-family:'DM Mono',monospace;font-size:11px;line-height:1.9;color:var(--text);background:var(--bg3);white-space:pre-wrap;word-break:break-word;max-height:540px;overflow-y:auto"></div>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════
+<!-- =======================================
   SHEET
-═══════════════════════════════════════ -->
+======================================= -->
 <div class="view" id="view-sheet">
   <div class="sheet-controls">
     <div style="font-size:20px;font-weight:800">All Weeks</div>
@@ -764,7 +764,7 @@ function pct(tId,aId,dId){
   const t=parseFloat(document.getElementById(tId).value)||0;
   const a=parseFloat(document.getElementById(aId).value)||0;
   const el=document.getElementById(dId);
-  if(!t){el.textContent='—';el.className='pct';return}
+  if(!t){el.textContent='-';el.className='pct';return}
   const p=Math.round(a/t*100);
   el.textContent=p+'%';
   el.className='pct '+(p>=100?'good':p>=70?'mid':'bad');
@@ -773,7 +773,7 @@ function roasCalc(cId,rId,dId){
   const c=parseFloat(document.getElementById(cId).value)||0;
   const r=parseFloat(document.getElementById(rId).value)||0;
   const el=document.getElementById(dId);
-  if(!c){el.textContent='—';el.className='ad-roas pct';return}
+  if(!c){el.textContent='-';el.className='ad-roas pct';return}
   const v=(r/c).toFixed(2);
   el.textContent=v+'x';
   el.className='ad-roas pct '+(v>=4?'good':v>=2?'mid':'bad');
@@ -782,7 +782,7 @@ function roasCalc(cId,rId,dId){
 function diffCalc(){
   const cur=n('b2cA'), prev=n('b2cPrev');
   const el=document.getElementById('b2cDiff');
-  if(!prev||!cur){el.textContent='—';el.className='pct';return}
+  if(!prev||!cur){el.textContent='-';el.className='pct';return}
   const diff=cur-prev, p=Math.round(diff/prev*100);
   el.textContent=(diff>=0?'+':'')+diff.toFixed(0)+' ('+(p>=0?'+':'')+p+'%)';
   el.className='pct '+(diff>=0?'good':'bad');
@@ -803,19 +803,19 @@ function calcGrowth(){
 
   const cr=document.getElementById('convRate');
   if(sess&&ord){const v=(ord/sess*100).toFixed(1);cr.textContent=v+'%';cr.className='pct '+(parseFloat(v)>=2?'good':parseFloat(v)>=1?'mid':'bad');}
-  else{cr.textContent='—';cr.className='pct';}
+  else{cr.textContent='-';cr.className='pct';}
 
   const ao=document.getElementById('aov');
   if(ord&&rev){ao.textContent='€'+(rev/ord).toFixed(0);ao.className='pct good';}
-  else{ao.textContent='—';ao.className='pct';}
+  else{ao.textContent='-';ao.className='pct';}
 
-  // FIX: was comparing string v against number thresholds — use parseFloat
+  // FIX: was comparing string v against number thresholds - use parseFloat
   const ca=document.getElementById('cac');
   if(newC&&tAd){
     const v=parseFloat((tAd/newC).toFixed(0));
     ca.textContent='€'+v;
     ca.className='pct '+(v<15?'good':v<30?'mid':'bad');
-  } else{ca.textContent='—';ca.className='pct';}
+  } else{ca.textContent='-';ca.className='pct';}
 
   calcFinancials();
 }
@@ -827,11 +827,11 @@ function calcFinancials(){
 
   const tr=document.getElementById('totalRevAll');
   if(total){tr.textContent='€'+total.toLocaleString();tr.className='pct good';}
-  else{tr.textContent='—';tr.className='pct';}
+  else{tr.textContent='-';tr.className='pct';}
 
   const gp=document.getElementById('grossProfit');
   if(total&&mg){const v=Math.round(total*(mg/100));gp.textContent='€'+v.toLocaleString();gp.className='pct '+(v>0?'good':'bad');}
-  else{gp.textContent='—';gp.className='pct';}
+  else{gp.textContent='-';gp.className='pct';}
 }
 
 // ─────────────────────────────────────────
@@ -839,7 +839,7 @@ function calcFinancials(){
 // ─────────────────────────────────────────
 let _cc=0, _oc=0;
 
-// B2B NEW — contacts with Potential Revenue
+// B2B NEW - contacts with Potential Revenue
 function addContact(){
   _cc++;
   const id='c'+_cc;
@@ -873,7 +873,7 @@ function getContacts(){
   }).filter(c=>c.name||c.company);
 }
 
-// B2B OLD — contacts without potential revenue
+// B2B OLD - contacts without potential revenue
 function addOldContact(){
   _oc++;
   const id='oc'+_oc;
@@ -963,7 +963,7 @@ function addAdChannel(){
   tr.innerHTML=`<td><input type="text" id="aname${id}" placeholder="Channel" style="background:var(--bg3);border:1px solid var(--border);border-radius:5px;color:var(--text);font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;width:80px;padding:4px 6px;outline:none;transition:border-color .15s" onfocus="this.style.borderColor='var(--green)'" onblur="this.style.borderColor='var(--border)'"></td>
 <td><div class="field"><input type="number" id="ac${id}" placeholder="0" oninput="roasCalcCustom('${id}');totals()"></div></td>
 <td><div class="field"><input type="number" id="ar${id}" placeholder="0" oninput="roasCalcCustom('${id}');totals()"></div></td>
-<td><div class="ad-roas pct" id="aroas${id}">—</div></td>
+<td><div class="ad-roas pct" id="aroas${id}">-</div></td>
 <td><button onclick="removeAdRow('adrow_${id}')" style="background:none;border:1px solid var(--border);border-radius:4px;color:var(--text3);cursor:pointer;padding:2px 6px;font-size:11px;transition:all .2s" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='var(--text3)'">×</button></td>`;
   document.getElementById('adBody').appendChild(tr);
 }
@@ -971,7 +971,7 @@ function removeAdRow(id){document.getElementById(id).remove();totals();}
 function roasCalcCustom(id){
   const c=n('ac'+id),r=n('ar'+id);
   const el=document.getElementById('aroas'+id);
-  if(!c){el.textContent='—';el.className='ad-roas pct';return;}
+  if(!c){el.textContent='-';el.className='ad-roas pct';return;}
   const v=(r/c).toFixed(2);
   el.textContent=v+'x';
   el.className='ad-roas pct '+(v>=4?'good':v>=2?'mid':'bad');
@@ -992,11 +992,11 @@ function totals(){
   const tC=gC+mC+eC+extraC, tR=gR+mR+eR+extraR;
   document.getElementById('tCost').textContent='€ '+tC.toFixed(0);
   document.getElementById('tRev').textContent='€ '+tR.toFixed(0);
-  document.getElementById('tRoas').textContent=tC?(tR/tC).toFixed(2)+'x':'—';
+  document.getElementById('tRoas').textContent=tC?(tR/tC).toFixed(2)+'x':'-';
 }
 
 // ─────────────────────────────────────────
-// TASK EVENTS — dynamic rows
+// TASK EVENTS - dynamic rows
 // ─────────────────────────────────────────
 let _tev=1;
 function addTaskRow(){
@@ -1037,7 +1037,7 @@ async function fetchWoo(){
 
   status.textContent='Fetching...';
 
-  // WooCommerce REST API — orders endpoint
+  // WooCommerce REST API - orders endpoint
   const after=df+'T00:00:00';
   const before=dt+'T23:59:59';
   const apiUrl=`${url}/wp-json/wc/v3/reports/sales?date_min=${df}&date_max=${dt}&consumer_key=${key}&consumer_secret=${secret}`;
@@ -1048,7 +1048,7 @@ async function fetchWoo(){
       // Try orders endpoint as fallback
       const ordUrl=`${url}/wp-json/wc/v3/orders?after=${after}&before=${before}&per_page=100&consumer_key=${key}&consumer_secret=${secret}&status=completed,processing`;
       const ordResp=await fetch(ordUrl,{headers:{'Accept':'application/json'}});
-      if(!ordResp.ok) throw new Error('HTTP '+ordResp.status+' — check URL and keys');
+      if(!ordResp.ok) throw new Error('HTTP '+ordResp.status+' - check URL and keys');
       const orders=await ordResp.json();
       const rev=orders.reduce((s,o)=>s+parseFloat(o.total||0),0);
       const cnt=orders.length;
@@ -1074,7 +1074,7 @@ async function fetchWoo(){
 // EMAIL GENERATOR
 // ─────────────────────────────────────────
 function generateEmail(){
-  const wk=document.getElementById('fWk').value||'—';
+  const wk=document.getElementById('fWk').value||'-';
   const df=document.getElementById('fDateFrom').value||'';
   const dt=document.getElementById('fDateTo').value||'';
   const from=(document.getElementById('emailFrom').value||'Sophie').trim();
@@ -1082,82 +1082,82 @@ function generateEmail(){
   const mNames=['','January','February','March','April','May','June','July','August','September','October','November','December'];
   const month=mNames[parseInt(document.getElementById('fMonth').value)||0]||'';
   const dateRange=df&&dt?df+' - '+dt:'';
-  const feelLabel={green:'Strong week',amber:'Mixed week',red:'Difficult week','':'—'}[feeling]||'—';
+  const feelLabel={green:'Strong week',amber:'Mixed week',red:'Difficult week','':'-'}[feeling]||'-';
 
-  const b2bNCA=n('b2bNCA'),b2bNCT=n('b2bNCT');
-  const b2bOT=n('b2bOT'),b2bOA=n('b2bOA'),b2bOCT=n('b2bOCT'),b2bOCA=n('b2bOCA');
-  const b2bOrT=n('b2bOrT'),b2bOrA=n('b2bOrA');
-  const b2cT=n('b2cT'),b2cA=n('b2cA'),b2cOrd=n('b2cOrd');
-  const sessions=n('sessions'),newCust=n('newCust'),emailSubs=n('emailSubs');
-  const mg=parseFloat(document.getElementById('grossMargin').value)||0;
-  const gC=n('gC'),gR=n('gR'),mC=n('mC'),mR=n('mR'),eC=n('eC'),eR=n('eR');
-  const tC=gC+mC+eC,tR=gR+mR+eR;
-  const totalRev=b2cA+b2bNA+b2bOA;
+  const b2bNCA=n('b2bNCA'), b2bNCT=n('b2bNCT');
+  const b2bOT=n('b2bOT'), b2bOA=n('b2bOA'), b2bOCT=n('b2bOCT'), b2bOCA=n('b2bOCA');
+  const b2cT=n('b2cT'), b2cA=n('b2cA'), b2cOrd=n('b2cOrd');
+  const sessions=n('sessions'), newCust=n('newCust'), emailSubs=n('emailSubs');
+  const mg=parseFloat((document.getElementById('grossMargin')||{}).value)||0;
+  const gC=n('gC'), gR=n('gR'), mC=n('mC'), mR=n('mR'), eC=n('eC'), eR=n('eR');
+  const tC=gC+mC+eC, tR=gR+mR+eR;
+  const totalRev=b2cA+b2bOA;  // B2B New no longer tracks revenue
 
-  const pp=(a,t)=>t?Math.round(a/t*100)+'%':'—';
-  const rr=(r,c)=>c?(r/c).toFixed(2)+'x':'—';
-  const eu=(v)=>v?'EUR '+v.toLocaleString():'EUR 0';
-  const cr=sessions&&b2cOrd?(b2cOrd/sessions*100).toFixed(1)+'%':'—';
-  const aov=b2cOrd&&b2cA?'EUR '+(b2cA/b2cOrd).toFixed(0):'—';
-  const cac=newCust&&tC?'EUR '+(tC/newCust).toFixed(0):'—';
-  const gp=totalRev&&mg?'EUR '+Math.round(totalRev*(mg/100)).toLocaleString():'—';
+  const pp=(a,t)=>t?Math.round(a/t*100)+'%':'-';
+  const rr=(r,c)=>c?(r/c).toFixed(2)+'x':'-';
+  const eu=(v)=>v?'EUR '+Number(v).toLocaleString():'EUR 0';
+  const cr=sessions&&b2cOrd?(b2cOrd/sessions*100).toFixed(1)+'%':'-';
+  const aov=b2cOrd&&b2cA?'EUR '+(b2cA/b2cOrd).toFixed(0):'-';
+  const cac=newCust&&tC?'EUR '+(tC/newCust).toFixed(0):'-';
+  const gp=totalRev&&mg?'EUR '+Math.round(totalRev*(mg/100)).toLocaleString():'-';
 
+  // New contacts - include industry + potential
   const contacts=getContacts();
   const cLines=contacts.length
-    ?contacts.map(c=>'  - '+(c.name||'?')+(c.company?' / '+c.company:'')+' ['+c.status+']'+(c.potential?' — Potential: EUR '+c.potential:'')).join('\n')
+    ?contacts.map(c=>'  - '+(c.name||'?')+(c.company?' / '+c.company:'')+(c.industry?' ['+c.industry+']':'')+' - '+c.status+(c.potential?' - Potential: EUR '+c.potential:'')).join('\n')
     :'  (no contacts logged)';
+
+  // Old contacts - include potential
   const oldContacts=getOldContacts();
   const oCLines=oldContacts.length
-    ?oldContacts.map(c=>'  - '+(c.name||'?')+(c.company?' / '+c.company:'')+' ['+c.status+']').join('\n')
+    ?oldContacts.map(c=>'  - '+(c.name||'?')+(c.company?' / '+c.company:'')+' - '+c.status+(c.potential?' - Potential: EUR '+c.potential:'')).join('\n')
     :'  (no contacts logged)';
 
+  // Tasks
   const taskEvents=[...document.querySelectorAll('.taskEventInput')].map(e=>e.value.trim()).filter(Boolean);
-  const taskW=taskEvents.join(' / ')||'—';
-  const taskN=(document.getElementById('taskN')||{}).value||'—';
-  const ideaMain=(document.getElementById('ideaMain')||{}).value||'';
+  const taskW=taskEvents.join('\n  ')||'-';
+  const taskNMain=(document.getElementById('taskN')||{}).value||'';
+  const taskNExtra=[...document.querySelectorAll('.extra-taskN-input')].map(e=>e.value.trim()).filter(Boolean);
+  const allTaskN=[taskNMain,...taskNExtra].filter(Boolean).join('\n  ')||'-';
   const extraTasks=[...document.querySelectorAll('.extra-task-input')].map(e=>e.value.trim()).filter(Boolean);
+  const ideaMain=(document.getElementById('ideaMain')||{}).value||'';
   const extraIdeas=[...document.querySelectorAll('.extra-idea-input')].map(e=>e.value.trim()).filter(Boolean);
   const feelT=(document.getElementById('feelT')||{}).value||'';
-
-  const allTasks=[taskW,...extraTasks].filter(v=>v&&v!=='—').join('\n  ');
   const allIdeas=[ideaMain,...extraIdeas].filter(Boolean).join('\n  ');
 
   const txt=
 `Subject: Blokzeep Weekly Report | Week ${wk}${month?' | '+month:''}
 To: ${to}
-From: ${from}
-${dateRange?'Period: '+dateRange:''}
+From: ${from}${dateRange?'\nPeriod: '+dateRange:''}
 
-═══════════════════════════════════════
-BLOKZEEP WEEKLY REPORT — Week ${wk}
-${dateRange?dateRange+'\n':''}
-═══════════════════════════════════════
+=======================================
+BLOKZEEP WEEKLY REPORT -- Week ${wk}${dateRange?'\n'+dateRange:''}
+=======================================
 
-B2B — NEW CUSTOMERS
+B2B -- NEW CUSTOMERS
   Contacts:     ${b2bNCA} / ${b2bNCT} target  (${pp(b2bNCA,b2bNCT)})
 
   Who was contacted:
 ${cLines}
 
-B2B — EXISTING CUSTOMERS
+B2B -- EXISTING CUSTOMERS
   Revenue:      ${eu(b2bOA)} / ${eu(b2bOT)} target  (${pp(b2bOA,b2bOT)})
   Contacts:     ${b2bOCA} / ${b2bOCT} target  (${pp(b2bOCA,b2bOCT)})
 
   Who was contacted:
 ${oCLines}
 
-
-B2C — WEBSITE
+B2C -- WEBSITE
   Revenue:      ${eu(b2cA)} / ${eu(b2cT)} (${pp(b2cA,b2cT)})
-  Orders:       ${b2cOrd}
-  Sessions:     ${sessions||'—'}
+  Orders:       ${b2cOrd||'-'}
+  Sessions:     ${sessions||'-'}
   Conv. rate:   ${cr}
   Avg order:    ${aov}
 
 ACQUISITION
-  New customers:    ${newCust||'—'}
+  New customers:    ${newCust||'-'}
   CAC:              ${cac}
-  Email subs added: ${emailSubs||'—'}
+  Email subs added: ${emailSubs||'-'}
 
 AD PERFORMANCE
   Google:   cost ${eu(gC)} / revenue ${eu(gR)} / ROAS ${rr(gR,gC)}
@@ -1166,23 +1166,22 @@ AD PERFORMANCE
   TOTAL:    cost ${eu(tC)} / revenue ${eu(tR)} / ROAS ${rr(tR,tC)}
 
 FINANCIAL SUMMARY
-  Total revenue (all channels): ${eu(totalRev)}
-  Gross margin:   ${mg||'—'}%
+  Total revenue (B2C + B2B Old): ${eu(totalRev)}
+  Gross margin:   ${mg||'-'}%
   Gross profit:   ${gp}
 
 TASKS THIS WEEK
-  ${allTasks||'—'}
+  ${taskW}
 
 PRIORITIES NEXT WEEK
-  ${taskN||'—'}
-${allIdeas?'\nNEW IDEAS\n  '+allIdeas:''}
+  ${allTaskN}${allIdeas?'\n\nNEW IDEAS\n  '+allIdeas:''}
 
 ENERGY / FEELING
   ${feelLabel}${feelT?'\n  '+feelT:''}
 
-═══════════════════════════════════════
+=======================================
 ${from} | Blokzeep
-═══════════════════════════════════════`;
+=======================================`;
 
   document.getElementById('emailContent').textContent=txt;
   const out=document.getElementById('emailOutput');
@@ -1279,7 +1278,7 @@ function updateSuggestions(){
   fields.forEach(({k,lbl})=>{
     const v=parseFloat((document.getElementById('mt_'+k)||{}).value)||0;
     const el=document.getElementById('sg2_'+k);
-    if(el) el.textContent = v ? Math.round(v/4)+' '+lbl+' / week' : '—';
+    if(el) el.textContent = v ? Math.round(v/4)+' '+lbl+' / week' : '-';
   });
 }
 document.addEventListener('input', e=>{
@@ -1313,7 +1312,7 @@ function renderProgress(){
   const wrap=document.getElementById('mtProgress');
 
   const mNames=['','January','February','March','April','May','June','July','August','September','October','November','December'];
-  document.getElementById('mtProgressLabel').textContent=`— ${mNames[m]} ${y} (${weeks.length} week${weeks.length!==1?'s':''} recorded)`;
+  document.getElementById('mtProgressLabel').textContent=`- ${mNames[m]} ${y} (${weeks.length} week${weeks.length!==1?'s':''} recorded)`;
 
   if(!mt.b2bNContacts&&!mt.b2bO&&!mt.b2c&&!weeks.length){
     wrap.innerHTML='<div class="empty"><div class="empty-icon"></div><p>Set targets and save weekly data to see progress.</p></div>';
@@ -1330,9 +1329,9 @@ function renderProgress(){
   const sumTC=weeks.reduce((s,w)=>s+(w.tC||0),0);
 
   const rows=[
-    {label:'B2B New — Contacts', achieved:sumNCA,  target:mt.b2bNContacts||0, fmt:'#'},
-    {label:'B2B Old — Revenue',  achieved:sumOA,   target:mt.b2bO||0,         fmt:'€'},
-    {label:'B2B Old — Contacts', achieved:sumOCA,  target:mt.b2bOContacts||0, fmt:'#'},
+    {label:'B2B New - Contacts', achieved:sumNCA,  target:mt.b2bNContacts||0, fmt:'#'},
+    {label:'B2B Old - Revenue',  achieved:sumOA,   target:mt.b2bO||0,         fmt:'€'},
+    {label:'B2B Old - Contacts', achieved:sumOCA,  target:mt.b2bOContacts||0, fmt:'#'},
     {label:'B2C Website',        achieved:sumB2c,  target:mt.b2c||0,          fmt:'€'},
     {label:'Total Revenue',      achieved:sumTR,   target:0,                   fmt:'€'},
     {label:'Total Ad Cost',      achieved:sumTC,   target:0,                   fmt:'€'},
@@ -1343,12 +1342,12 @@ function renderProgress(){
     ${rows.map(r=>{
       const hasTgt=r.target>0;
       const p=hasTgt?Math.min(Math.round(r.achieved/r.target*100),100):0;
-      const pStr=hasTgt?p+'%':'—';
+      const pStr=hasTgt?p+'%':'-';
       const col=p>=100?'var(--green)':p>=70?'var(--amber)':'var(--red)';
       const barCol=hasTgt?col:'var(--border2)';
       const barW=hasTgt?p:0;
       const achStr=(r.fmt==='€'?'€':'')+r.achieved.toFixed(0);
-      const tgtStr=hasTgt?(r.fmt==='€'?'€':'')+r.target.toFixed(0):'—';
+      const tgtStr=hasTgt?(r.fmt==='€'?'€':'')+r.target.toFixed(0):'-';
       return `<div class="progress-row">
         <div class="pr-label">${r.label}</div>
         <div class="pr-bar-wrap"><div class="pr-bar" style="width:${barW}%;background:${barCol}"></div></div>
@@ -1361,7 +1360,7 @@ function renderProgress(){
 }
 
 // ─────────────────────────────────────────
-// OVERVIEW — monthly aggregation
+// OVERVIEW - monthly aggregation
 // ─────────────────────────────────────────
 const CI={};
 function renderCharts(){
@@ -1404,7 +1403,7 @@ function renderCharts(){
 
   const labels=monthData.map(m=>m.label);
   const eur=v=>'€'+Math.round(v).toLocaleString();
-  const pct=(a,t)=>t?Math.round(a/t*100)+'%':'—';
+  const pct=(a,t)=>t?Math.round(a/t*100)+'%':'-';
 
   // ── SUMMARY STAT CARDS ──
   const latest=monthData[monthData.length-1]||{};
@@ -1434,8 +1433,8 @@ function renderCharts(){
     ${[
       {l:'Total Revenue (all time)', v:eur(totalRevAll), c:co.green},
       {l:'Total B2C Revenue',        v:eur(totalB2cAll), c:co.green},
-      {l:'Latest month B2B Old',     v:eur(latest.b2bOA||0)+' / '+(latest.b2bOT?eur(latest.b2bOT):'—'), c:co.amber},
-      {l:'Latest month B2C',         v:eur(latest.b2cA||0)+' / '+(latest.b2cT?eur(latest.b2cT):'—'),   c:co.green},
+      {l:'Latest month B2B Old',     v:eur(latest.b2bOA||0)+' / '+(latest.b2bOT?eur(latest.b2bOT):'-'), c:co.amber},
+      {l:'Latest month B2C',         v:eur(latest.b2cA||0)+' / '+(latest.b2cT?eur(latest.b2cT):'-'),   c:co.green},
     ].map(k=>`<div style="background:#fff;border:1px solid #C8DDD2;border-radius:8px;padding:14px 14px 12px">
       <div style="font-size:9px;font-weight:700;color:#7A9E8C;text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px">${k.l}</div>
       <div style="font-family:'DM Mono',monospace;font-size:18px;font-weight:700;color:${k.c}">${k.v}</div>
@@ -1444,7 +1443,7 @@ function renderCharts(){
 
   // ── MONTHLY TABLE ──
   const tableHtml=`<div style="grid-column:1/-1;background:#fff;border:1px solid #C8DDD2;border-radius:8px;overflow:hidden">
-    <div style="padding:11px 16px;border-bottom:1px solid #C8DDD2;font-size:10px;font-weight:700;color:#1B6B48;letter-spacing:.1em;text-transform:uppercase">Monthly summary — all data</div>
+    <div style="padding:11px 16px;border-bottom:1px solid #C8DDD2;font-size:10px;font-weight:700;color:#1B6B48;letter-spacing:.1em;text-transform:uppercase">Monthly summary - all data</div>
     <div style="overflow-x:auto">
     <table style="width:100%;border-collapse:collapse;font-family:'DM Mono',monospace;font-size:11px;min-width:720px">
       <thead><tr style="background:#EDF3EF">
@@ -1469,17 +1468,17 @@ function renderCharts(){
         const bg=i%2===0?'background:#FAFAFA':'background:#fff';
         return`<tr style="${bg}">
           <td style="padding:8px 12px;border:1px solid #C8DDD2;font-family:'Syne',sans-serif;font-weight:700;font-size:11px;white-space:nowrap">${m.label}</td>
-          <td style="padding:8px 12px;border:1px solid #C8DDD2;text-align:right">${m.b2bNCA||'—'}${m.b2bNCT?' / '+m.b2bNCT:''}</td>
+          <td style="padding:8px 12px;border:1px solid #C8DDD2;text-align:right">${m.b2bNCA||'-'}${m.b2bNCT?' / '+m.b2bNCT:''}</td>
           <td style="padding:8px 12px;border:1px solid #C8DDD2;text-align:right;${cls(nPct)}">${nPct}</td>
-          <td style="padding:8px 12px;border:1px solid #C8DDD2;text-align:right">${m.b2bOA?eur(m.b2bOA):'—'}${m.b2bOT?' / '+eur(m.b2bOT):''}</td>
+          <td style="padding:8px 12px;border:1px solid #C8DDD2;text-align:right">${m.b2bOA?eur(m.b2bOA):'-'}${m.b2bOT?' / '+eur(m.b2bOT):''}</td>
           <td style="padding:8px 12px;border:1px solid #C8DDD2;text-align:right;${cls(oPct)}">${oPct}</td>
-          <td style="padding:8px 12px;border:1px solid #C8DDD2;text-align:right">${m.b2bOCA||'—'}${m.b2bOCT?' / '+m.b2bOCT:''}</td>
+          <td style="padding:8px 12px;border:1px solid #C8DDD2;text-align:right">${m.b2bOCA||'-'}${m.b2bOCT?' / '+m.b2bOCT:''}</td>
           <td style="padding:8px 12px;border:1px solid #C8DDD2;text-align:right;${cls(ocPct)}">${ocPct}</td>
-          <td style="padding:8px 12px;border:1px solid #C8DDD2;text-align:right">${m.b2cA?eur(m.b2cA):'—'}${m.b2cT?' / '+eur(m.b2cT):''}</td>
+          <td style="padding:8px 12px;border:1px solid #C8DDD2;text-align:right">${m.b2cA?eur(m.b2cA):'-'}${m.b2cT?' / '+eur(m.b2cT):''}</td>
           <td style="padding:8px 12px;border:1px solid #C8DDD2;text-align:right;${cls(bPct)}">${bPct}</td>
-          <td style="padding:8px 12px;border:1px solid #C8DDD2;text-align:right">${m.b2cOrd||'—'}</td>
-          <td style="padding:8px 12px;border:1px solid #C8DDD2;text-align:right;color:#C0392B">${m.tC?eur(m.tC):'—'}</td>
-          <td style="padding:8px 12px;border:1px solid #C8DDD2;text-align:right;color:#1B6B48">${m.tR?eur(m.tR):'—'}</td>
+          <td style="padding:8px 12px;border:1px solid #C8DDD2;text-align:right">${m.b2cOrd||'-'}</td>
+          <td style="padding:8px 12px;border:1px solid #C8DDD2;text-align:right;color:#C0392B">${m.tC?eur(m.tC):'-'}</td>
+          <td style="padding:8px 12px;border:1px solid #C8DDD2;text-align:right;color:#1B6B48">${m.tR?eur(m.tR):'-'}</td>
           <td style="padding:8px 12px;border:1px solid #C8DDD2;text-align:right;color:#7A9E8C">${m.wks}</td>
         </tr>`;
       }).join('')}
@@ -1490,19 +1489,19 @@ function renderCharts(){
 
   // ── CHARTS ──
   const chartDefs=[
-    {id:'c1',title:'B2C Revenue — Monthly (target vs achieve)',full:true,type:'bar',ds:[
+    {id:'c1',title:'B2C Revenue - Monthly (target vs achieve)',full:true,type:'bar',ds:[
       {label:'Target', data:monthData.map(m=>m.b2cT),  backgroundColor:co.greenLt, borderColor:co.green, borderWidth:1.5},
       {label:'Achieve',data:monthData.map(m=>m.b2cA),  backgroundColor:co.greenBg, borderColor:co.green, borderWidth:1.5},
     ]},
-    {id:'c2',title:'B2B New — Contacts (target vs achieve)',type:'bar',ds:[
+    {id:'c2',title:'B2B New - Contacts (target vs achieve)',type:'bar',ds:[
       {label:'Target', data:monthData.map(m=>m.b2bNCT), backgroundColor:co.amberLt, borderColor:co.amber, borderWidth:1.5},
       {label:'Achieve',data:monthData.map(m=>m.b2bNCA), backgroundColor:co.amberBg, borderColor:co.amber, borderWidth:1.5},
     ]},
-    {id:'c3',title:'B2B Old — Revenue (target vs achieve)',type:'bar',ds:[
+    {id:'c3',title:'B2B Old - Revenue (target vs achieve)',type:'bar',ds:[
       {label:'Target', data:monthData.map(m=>m.b2bOT), backgroundColor:co.redLt, borderColor:co.red, borderWidth:1.5},
       {label:'Achieve',data:monthData.map(m=>m.b2bOA), backgroundColor:co.redBg, borderColor:co.red, borderWidth:1.5},
     ]},
-    {id:'c4',title:'Total Ad Cost vs Revenue — Monthly',type:'bar',ds:[
+    {id:'c4',title:'Total Ad Cost vs Revenue - Monthly',type:'bar',ds:[
       {label:'Ad Cost',   data:monthData.map(m=>m.tC), backgroundColor:co.redLt,   borderColor:co.red,   borderWidth:1.5},
       {label:'Ad Revenue',data:monthData.map(m=>m.tR), backgroundColor:co.greenBg, borderColor:co.green, borderWidth:1.5},
     ]},
@@ -1528,11 +1527,11 @@ function renderSheet(){
   const data=loadWeeks();
   const wrap=document.getElementById('sheetWrap');
   if(!data.length){wrap.innerHTML='<div class="empty"><div class="empty-icon">Sheet</div><p>No data yet.</p></div>';return}
-  const pp=(a,t)=>t?Math.round(a/t*100)+'%':'—';
-  const rr=(r,c)=>c?(r/c).toFixed(2)+'x':'—';
-  // cc receives a string like "75%" or "4.00x" — parseFloat handles both correctly
+  const pp=(a,t)=>t?Math.round(a/t*100)+'%':'-';
+  const rr=(r,c)=>c?(r/c).toFixed(2)+'x':'-';
+  // cc receives a string like "75%" or "4.00x" - parseFloat handles both correctly
   const cc=(v,g=100,m=70)=>{const x=parseFloat(v);if(isNaN(x))return'';return x>=g?'cg':x>=m?'ca':'cr'};
-  const feelLabel={green:'Strong',amber:'Mixed',red:'Difficult','':'—'};
+  const feelLabel={green:'Strong',amber:'Mixed',red:'Difficult','':'-'};
   wrap.innerHTML=`<table>
     <thead><tr>
       <th>WK</th><th>From</th><th>To</th>
@@ -1548,16 +1547,16 @@ function renderSheet(){
     </tr></thead><tbody>
     ${data.map(d=>{
       return`<tr>
-        <td>W${d.wk}</td><td>${d.dateFrom||'—'}</td><td>${d.dateTo||'—'}</td>
-        <td>${d.b2bNT||'—'}</td><td>${d.b2bNA||'—'}</td><td class="${cc(pp(d.b2bNA,d.b2bNT))}">${pp(d.b2bNA,d.b2bNT)}</td>
-        <td>${d.b2bOT||'—'}</td><td>${d.b2bOA||'—'}</td><td class="${cc(pp(d.b2bOA,d.b2bOT))}">${pp(d.b2bOA,d.b2bOT)}</td>
-        <td>${d.b2bOrT||'—'}</td><td>${d.b2bOrA||'—'}</td><td class="${cc(pp(d.b2bOrA,d.b2bOrT))}">${pp(d.b2bOrA,d.b2bOrT)}</td>
-        <td>${d.b2cT||'—'}</td><td>${d.b2cA||'—'}</td><td class="${cc(pp(d.b2cA,d.b2cT))}">${pp(d.b2cA,d.b2cT)}</td><td>${d.b2cOrd||'—'}</td>
-        <td>${d.gC||'—'}</td><td>${d.gR||'—'}</td><td class="${cc(rr(d.gR,d.gC),4,2)}">${rr(d.gR,d.gC)}</td>
-        <td>${d.mC||'—'}</td><td>${d.mR||'—'}</td><td class="${cc(rr(d.mR,d.mC),4,2)}">${rr(d.mR,d.mC)}</td>
-        <td>${d.eC||'—'}</td><td>${d.eR||'—'}</td><td class="${cc(rr(d.eR,d.eC),4,2)}">${rr(d.eR,d.eC)}</td>
-        <td>${d.tC||'—'}</td><td>${d.tR||'—'}</td><td class="${cc(rr(d.tR,d.tC),4,2)}">${rr(d.tR,d.tC)}</td>
-        <td>${feelLabel[d.feeling||'']||'—'}</td>
+        <td>W${d.wk}</td><td>${d.dateFrom||'-'}</td><td>${d.dateTo||'-'}</td>
+        <td>${d.b2bNT||'-'}</td><td>${d.b2bNA||'-'}</td><td class="${cc(pp(d.b2bNA,d.b2bNT))}">${pp(d.b2bNA,d.b2bNT)}</td>
+        <td>${d.b2bOT||'-'}</td><td>${d.b2bOA||'-'}</td><td class="${cc(pp(d.b2bOA,d.b2bOT))}">${pp(d.b2bOA,d.b2bOT)}</td>
+        <td>${d.b2bOrT||'-'}</td><td>${d.b2bOrA||'-'}</td><td class="${cc(pp(d.b2bOrA,d.b2bOrT))}">${pp(d.b2bOrA,d.b2bOrT)}</td>
+        <td>${d.b2cT||'-'}</td><td>${d.b2cA||'-'}</td><td class="${cc(pp(d.b2cA,d.b2cT))}">${pp(d.b2cA,d.b2cT)}</td><td>${d.b2cOrd||'-'}</td>
+        <td>${d.gC||'-'}</td><td>${d.gR||'-'}</td><td class="${cc(rr(d.gR,d.gC),4,2)}">${rr(d.gR,d.gC)}</td>
+        <td>${d.mC||'-'}</td><td>${d.mR||'-'}</td><td class="${cc(rr(d.mR,d.mC),4,2)}">${rr(d.mR,d.mC)}</td>
+        <td>${d.eC||'-'}</td><td>${d.eR||'-'}</td><td class="${cc(rr(d.eR,d.eC),4,2)}">${rr(d.eR,d.eC)}</td>
+        <td>${d.tC||'-'}</td><td>${d.tR||'-'}</td><td class="${cc(rr(d.tR,d.tC),4,2)}">${rr(d.tR,d.tC)}</td>
+        <td>${feelLabel[d.feeling||'']||'-'}</td>
         <td class="cell-del" onclick="delWeek(${d.id})" title="Delete">×</td>
       </tr>`;
     }).join('')}
